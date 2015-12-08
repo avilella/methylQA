@@ -99,7 +99,7 @@ This script requires samtools and seqtk. There is a linux 64bit copy of those to
 
 Then use the following command-line (all in one line):
 
-perl methylQA/scripts/chr_chunk.pl -i GRCm38.genome | while read i; do perl methylQA/scripts/generate_cpg_bed.pl -plus_sign -i $GROUP/Genomes/Mouse/GRCm38/Mus_musculus.GRCm38.68.dna.all.fa -chunk $i; done | sort -k1,1 -k2,2n | bgzip -c > GRCm38.cpg.nnn.bed.gz
+perl methylQA/scripts/chr_chunk.pl -i GRCm38.genome | while read i; do perl methylQA/scripts/generate_cpg_bed.pl -plus_sign -i $GROUP/Genomes/Mouse/GRCm38/Mus_musculus.GRCm38.68.dna.all.fa -chunk $i; done | sort -k1,1d -k2,2n | bgzip -c > GRCm38.cpg.nnn.bed.gz
 
 
 =head1 DESCRIPTION
